@@ -1,0 +1,25 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "interview",
+			"request": "launch",
+			"type": "dart",
+			"smartclientBin": "C:/totvs/bin/smartclient/smartclient.exe"
+		},
+		{
+			"name": "interview (profile mode)",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile",
+			"smartclientBin": "C:/totvs/bin/smartclient/smartclient.exe"
+		},
+		{
+			"name": "interview (release mode)",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release",
+			"smartclientBin": "C:/totvs/bin/smartclient/smartclient.exe"
+		}
+	]
+}
