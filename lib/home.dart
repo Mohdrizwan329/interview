@@ -1,16 +1,11 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
-// ignore: unnecessary_import
-import 'package:flutter/rendering.dart';
 import 'package:interview/cards.dart';
 import 'package:interview/circle.dart';
 import 'package:interview/data.dart';
-import 'package:interview/notification.dart';
 import 'package:interview/profile.dart';
 import 'package:interview/scroll_page.dart';
+import 'package:interview/search.dart';
 
-// ignore: use_key_in_widget_constructors
 class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
@@ -23,21 +18,38 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
 
-        title: Text(
-          "Welcome Home",
-          style: TextStyle(fontSize: 25),
+        //  title: Text(
+        //  "Welcome Home",
+        //style: TextStyle(fontSize: 25),
+        //   ),
+
+        leading: Icon(
+          Icons.account_circle_rounded,
+          size: 35,
         ),
-        centerTitle: true,
+        title: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.location_on),
+        ),
         // ignore: prefer_const_literals_to_create_immutables
 
         //------- Notification --------//
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Notifications()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Search()));
               },
-              icon: Icon(Icons.notification_add))
+              icon: Icon(Icons.search)),
+          IconButton(
+              onPressed: () {
+                /*Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ThreeDorts()));*/
+              },
+              icon: Icon(
+                Icons.more_vert,
+                size: 35,
+              )),
         ],
       ),
       body: SingleChildScrollView(
@@ -61,10 +73,9 @@ class _HomeState extends State<Home> {
                 height: 400,
                 alignment: Alignment.centerLeft,
                 child: Row(
-                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Text(
-                      "Hi Picker",
+                      "Hi Foodie, what's your pick?",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -118,6 +129,17 @@ class _HomeState extends State<Home> {
               },
               icon: Icon(
                 Icons.data_usage,
+                semanticLabel: "Home",
+                size: 40,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+              },
+              icon: Icon(
+                Icons.shopping_bag,
                 semanticLabel: "Home",
                 size: 40,
               ),

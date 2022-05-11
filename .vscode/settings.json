@@ -1,4 +1,11 @@
 {
     "python.terminal.activateEnvironment": false,
-    "totvsLanguageServer.welcomePage": false
+    "totvsLanguageServer.welcomePage": false,
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/doanthuanthanh88/testapi6/main/schema.json": [
+            "*.yaml",
+            "file:///c%3A/Users/mohd%20rizwan/Desktop/Projects/interview/pubspec.yaml"
+        ],
+        "https://json.schemastore.org/sourcehut-build-0.65.0.json": "file:///c%3A/Users/mohd%20rizwan/Desktop/Projects/interview/lib/home.dart"
+    }
 }

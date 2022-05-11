@@ -16,8 +16,9 @@ class Scaroll extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
+            child: InkWell(
+              onTap: () {},
+              /* height: 200,
               width: 340,
               decoration: BoxDecoration(
                 color: Colors.blue.shade900,
@@ -27,17 +28,18 @@ class Scaroll extends StatelessWidget {
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-              ),
+              ),*/
               child: Image.asset(
-                "assets/card.png",
+                "assets/content9442.jpg",
                 fit: BoxFit.fill,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
+            child: InkWell(
+              onTap: () {},
+              /*  height: 200,
               width: 340,
               decoration: BoxDecoration(
                 color: Colors.black,
@@ -47,17 +49,18 @@ class Scaroll extends StatelessWidget {
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-              ),
+              ),*/
               child: Image.asset(
-                "assets/card.png",
+                "assets/sun-planet.jpg",
                 fit: BoxFit.fill,
               ),
             ),
           ),
-          Padding( 
+          Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
+            child: InkWell(
+              onTap: () {},
+              /* height: 200,
               width: 340,
               decoration: BoxDecoration(
                 color: Colors.green,
@@ -67,17 +70,18 @@ class Scaroll extends StatelessWidget {
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-              ),
+              ),*/
               child: Image.asset(
-                "assets/card.png",
+                "assets/fast-food.jpg",
                 fit: BoxFit.fill,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
+            child: InkWell(
+              onTap: () {},
+              /*height: 200,
               width: 340,
               decoration: BoxDecoration(
                 color: Colors.orange,
@@ -87,17 +91,18 @@ class Scaroll extends StatelessWidget {
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-              ),
+              ),*/
               child: Image.asset(
-                "assets/card.png",
+                "assets/unnamed.jpg",
                 fit: BoxFit.fill,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 200,
+            child: InkWell(
+              onTap: () {},
+              /*height: 200,
               width: 340,
               decoration: BoxDecoration(
                 color: Colors.pink,
@@ -107,9 +112,9 @@ class Scaroll extends StatelessWidget {
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
-              ),
+              ),*/
               child: Image.asset(
-                "assets/card.png",
+                "assets/0.68487000_1559290735_70-20190615-dte-english.jpg",
                 fit: BoxFit.fill,
               ),
             ),

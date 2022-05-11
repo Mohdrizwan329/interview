@@ -99,19 +99,22 @@ class _LoginPageState extends State<LoginPage> {
                             TextButton(
                               onPressed: () {},
                               child: CircleAvatar(
-                                backgroundImage: AssetImage("assets/b.jpeg"),
+                                child: Icon(Icons.facebook),
+                                //backgroundImage: AssetImage("assets/b.jpeg"),
                               ),
                             ),
                             TextButton(
                               onPressed: () {},
                               child: CircleAvatar(
-                                backgroundImage: AssetImage("assets/e.png"),
+                                child: Icon(Icons.email),
+                                //backgroundImage: AssetImage("assets/e.png"),
                               ),
                             ),
                             TextButton(
                               onPressed: () {},
                               child: CircleAvatar(
-                                backgroundImage: AssetImage("assets/b.jpeg"),
+                                child: Icon(Icons.phone),
+                                //backgroundImage: AssetImage("assets/b.jpeg"),
                               ),
                             ),
                           ],

@@ -15,34 +15,42 @@ class Circle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/a.jpeg"),
+                backgroundImage:
+                    AssetImage("assets/McDonalds-logo-640x360.png"),
               ),
             ),
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/b.jpeg"),
+                backgroundImage: AssetImage("assets/Kfc_logo-768x432.png"),
               ),
             ),
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/c.jpeg"),
+                backgroundImage: AssetImage("assets/Domino’s-Logo-640x524.png"),
               ),
             ),
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/d.jpeg"),
+                backgroundImage: AssetImage("assets/Dunkin-Donuts-Logo.png"),
               ),
             ),
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/a.jpeg"),
+                backgroundImage:
+                    AssetImage("assets/Pizza-Hut-logo-640x441.png"),
               ),
             ),
-            Container(
+            InkWell(
+              onTap: () {},
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/a.jpeg"),
+                backgroundImage: AssetImage("assets/Chipotle-logo-768x432.png"),
               ),
             ),
           ],
