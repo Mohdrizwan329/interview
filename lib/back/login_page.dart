@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, dead_cod, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:interview/bg_image.dart';
-import 'package:interview/home.dart';
+import 'package:interview/back/bg_image.dart';
+import 'package:interview/home/home.dart';
 
 // ignore: use_key_in_widget_constructors
 class LoginPage extends StatefulWidget {

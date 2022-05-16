@@ -1,8 +1,5 @@
-// ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_constructors
 class Car extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,19 +18,20 @@ class Car extends StatelessWidget {
                   TextButton(
                     onPressed: () {},
                     child: Image.asset(
-                      "assets/a.jpeg",
+                      "assets/653b1fd1eab5f5220b8397cade6224f3.webp",
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                  ),
-                  Text(
-                    '''Roshan Garh,Ambedkar Nagar  \n
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        '''Roshan Garh,Ambedkar Nagar  \n
 
                      \n 20% off  Good Quality product''',
-                    maxLines: 2,
-                  ),
+                        maxLines: 2,
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -50,11 +48,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/unnamed (1).jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker"),
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -70,11 +73,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/dinef-1615538726.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -90,11 +98,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/eazytrendz_2744_trend20200306032517.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -110,11 +123,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/eazytrendz_2936_trend20200911120002.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -130,11 +148,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/kheer.webp",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -150,11 +173,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/download.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -170,11 +198,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/15998244230.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -190,11 +223,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/15998226771.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),
@@ -210,31 +248,16 @@ class Car extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Image.asset(
-                        "assets/a.jpeg",
+                        "assets/15998244241.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("thi is a programer and progming worker")
-                  ],
-                )),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            child: Container(
-                width: 400,
-                height: 80,
-                child: Row(
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Image.asset(
-                        "assets/a.jpeg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Text("thi is a programer and progming worker"),
+                    Column(
+                      children: <Widget>[
+                        Text("thi is a programer and progming worker"),
+                        Text("data")
+                      ],
+                    )
                   ],
                 )),
           ),

@@ -26,9 +26,10 @@ class _ProfileState extends State<Profile> {
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 accountEmail: Text("Mriz15293@gmail.com"),
-                currentAccountPicture: Image.asset(
-                  "assets/photo-1528639194116-01a1dabcab68.jpg",
-                  fit: BoxFit.fill,
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    "assets/photo-1528639194116-01a1dabcab68.jpg",
+                  ),
                 ),
               ),
             ),

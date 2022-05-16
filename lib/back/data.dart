@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:interview/home.dart';
+import 'package:interview/home/home.dart';
 import 'dart:convert';
 
-import 'package:interview/profile.dart';
+import 'package:interview/home/profile.dart';
 
 // ignore: use_key_in_widget_constructors
 class Data extends StatefulWidget {
@@ -72,6 +72,14 @@ class _DataState extends State<Data> {
               },
               icon: Icon(
                 Icons.data_usage,
+                semanticLabel: "Home",
+                size: 40,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.shopping_bag,
                 semanticLabel: "Home",
                 size: 40,
               ),
