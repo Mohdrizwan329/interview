@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:interview/home/home.dart';
@@ -7,7 +5,6 @@ import 'dart:convert';
 
 import 'package:interview/home/profile.dart';
 
-// ignore: use_key_in_widget_constructors
 class Data extends StatefulWidget {
   @override
   State<Data> createState() => _DataState();
@@ -15,7 +12,6 @@ class Data extends StatefulWidget {
 
 class _DataState extends State<Data> {
   var url = "https://jsonplaceholder.typicode.com/photos";
-  // ignore: prefer_typing_uninitialized_variables
   var data;
   @override
   void initState() {
