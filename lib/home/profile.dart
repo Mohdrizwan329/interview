@@ -1,8 +1,5 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_i, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_constructors
 class Profile extends StatefulWidget {
   @override
   State<Profile> createState() => _ProfileState();

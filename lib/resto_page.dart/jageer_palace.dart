@@ -2,42 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class MissNora extends StatefulWidget {
+class JageerPalace extends StatefulWidget {
   @override
-  State<MissNora> createState() => _MissNoraState();
+  State<JageerPalace> createState() => _JageerPalaceState();
 }
 
-class _MissNoraState extends State<MissNora> {
-  var Url = 'https://www.zomato.com/ncr/miss-nora-rajouri-garden-new-delhi';
-
+class _JageerPalaceState extends State<JageerPalace> {
+  var Url =
+      'https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi';
   var data;
-
   @override
   void initState() {
     super.initState();
-    getNora();
+    getHotelJageer();
   }
 
-  getNora() async {
+  getHotelJageer() async {
     var res = await http.get(Uri.parse(Url));
     data = jsonDecode(res.body);
-    print(data);
     setState(() {});
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Miss Nora"),
+        title: Text("Hotel Jageer Palace"),
       ),
       body: data != null
           ? ListView.builder(
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(data[index]["title"]),
-                  // subtitle: Text("ID:${data[index]["id"]}"),
-                  leading: Image.network(data[index]["Url"]),
-                );
+                return ListTile();
               },
               itemCount: data.length)
           : Center(

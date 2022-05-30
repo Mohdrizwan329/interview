@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195234894080",
+    "project_id": "interview-dfdbb",
+    "storage_bucket": "interview-dfdbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195234894080:android:5bd88d6b7248aafbb423e5",
+        "android_client_info": {
+          "package_name": "interview.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195234894080-vrb0m745iakij15ncrdkqhimuuks8v2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8xKzwmCA-E3j6jwqqGl2d_ovM-bsRxuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195234894080-vrb0m745iakij15ncrdkqhimuuks8v2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

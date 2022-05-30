@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interview/resto_page.dart/castle_bar.dart';
 import 'package:interview/resto_page.dart/farmer_basket.dart';
 import 'package:interview/resto_page.dart/informal.dart';
+import 'package:interview/resto_page.dart/jageer_palace.dart';
 import 'package:interview/resto_page.dart/kabab_factory.dart';
 import 'package:interview/resto_page.dart/kitchen_district.dart';
 import 'package:interview/resto_page.dart/miss_nora.dart';
@@ -309,7 +310,7 @@ Radisson Blu Plaza Delhi AirPort, Mahipalpur'''),
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MissNora()));
+                                builder: (context) => JageerPalace()));
                       },
                       child: Image.asset(
                         "assets/15998226771.jpg",
@@ -319,12 +320,12 @@ Radisson Blu Plaza Delhi AirPort, Mahipalpur'''),
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Miss Noor''',
+                          '''Hotel Jageer Palace''',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Text('''
 
- 30% off'''),
+Rajouri Garden, New Delhi'''),
                       ],
                     )
                   ],
