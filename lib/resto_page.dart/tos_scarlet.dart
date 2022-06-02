@@ -8,19 +8,18 @@ class TosScarlet extends StatefulWidget {
 }
 
 class _TosScarletState extends State<TosScarlet> {
-  var Url =
-      'https://www.zomato.com/ncr/tos-take-off-scarlet-punjabi-bagh-new-delhi';
-  var data;
-  @override
-  void initState() {
-    super.initState();
-    getTos();
-  }
-
-  getTos() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
+  //var Url =
+  // 'https://www.zomato.com/ncr/tos-take-off-scarlet-punjabi-bagh-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getTos() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/tos-take-off-scarlet-punjabi-bagh-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
   }
 
   @override
@@ -29,16 +28,16 @@ class _TosScarletState extends State<TosScarlet> {
       appBar: AppBar(
         title: Text("TOS - Take Off Scarlet"),
       ),
-      body: data != null
+      body: userData != null
           ? ListView.builder(
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(data[index]["title"]),
+                  title: Text(userData[index]["title"]),
                   //subtitle: Text("ID:${data[index]["id"]}"),
-                  leading: Image.network(data[index]["Url"]),
+                  leading: Image.network(userData[index]["Url"]),
                 );
               },
-              itemCount: data.length)
+              itemCount: Mapdata.length)
           : Center(
               child: CircularProgressIndicator(),
             ),

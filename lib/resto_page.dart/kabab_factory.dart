@@ -8,19 +8,18 @@ class KababFactory extends StatefulWidget {
 }
 
 class _KababFactoryState extends State<KababFactory> {
-  var Url =
-      'https://www.zomato.com/ncr/the-great-kabab-factory-radisson-blu-marina-connaught-place-new-delhi';
-  var data;
-  @override
-  void initState() {
-    super.initState();
-    getKababFactory();
-  }
-
-  getKababFactory() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
+  //var Url =
+  //  'https://www.zomato.com/ncr/the-great-kabab-factory-radisson-blu-marina-connaught-place-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getKabab() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/the-great-kabab-factory-radisson-blu-marina-connaught-place-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
   }
 
   @override
@@ -29,15 +28,15 @@ class _KababFactoryState extends State<KababFactory> {
         appBar: AppBar(
           title: Text(" Kabab Factory"),
         ),
-        body: data != null
+        body: userData != null
             ? ListView.builder(
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(data[index]["title"]),
-                    leading: Image.network(data[index]["Url"]),
+                    title: Text(userData[index]["title"]),
+                    leading: Image.network(userData[index]["Url"]),
                   );
                 },
-                itemCount: data.length)
+                itemCount: Mapdata.length)
             : Center(
                 child: CircularProgressIndicator(),
               ));

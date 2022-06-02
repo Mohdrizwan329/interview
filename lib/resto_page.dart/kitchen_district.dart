@@ -8,19 +8,18 @@ class KitchenDistrict extends StatefulWidget {
 }
 
 class _KitchenDistrictState extends State<KitchenDistrict> {
-  var Url =
-      'https://www.zomato.com/ncr/kitchen-district-hyatt-centric-1-janakpuri-new-delhi';
-  var data;
-  @override
-  void initState() {
-    super.initState();
-    getKitchen();
-  }
-
-  getKitchen() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
+  //var Url =
+  // 'https://www.zomato.com/ncr/kitchen-district-hyatt-centric-1-janakpuri-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getKitchen() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/kitchen-district-hyatt-centric-1-janakpuri-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
   }
 
   @override
@@ -29,15 +28,15 @@ class _KitchenDistrictState extends State<KitchenDistrict> {
         appBar: AppBar(
           title: Text("Kitchen District - Hyatt Centric"),
         ),
-        body: data != null
+        body: userData != null
             ? ListView.builder(
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(data[index]["title"]),
-                    leading: Image.network(data[index]["Url"]),
+                    title: Text(userData[index]["title"]),
+                    leading: Image.network(userData[index]["Url"]),
                   );
                 },
-                itemCount: data.length)
+                itemCount: Mapdata.length)
             : Center(
                 child: CircularProgressIndicator(),
               ));

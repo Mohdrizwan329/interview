@@ -8,19 +8,23 @@ class JageerPalace extends StatefulWidget {
 }
 
 class _JageerPalaceState extends State<JageerPalace> {
-  var Url =
-      'https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi';
-  var data;
+  // var Url =
+  //   'https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getJageer() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
+  }
+
   @override
   void initState() {
     super.initState();
-    getHotelJageer();
-  }
-
-  getHotelJageer() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
   }
 
   @override
@@ -29,12 +33,15 @@ class _JageerPalaceState extends State<JageerPalace> {
       appBar: AppBar(
         title: Text("Hotel Jageer Palace"),
       ),
-      body: data != null
+      body: userData != null
           ? ListView.builder(
               itemBuilder: (context, index) {
-                return ListTile();
+                return ListTile(
+                  title: Text(userData[index]["title"]),
+                  leading: Image.network(userData[index]["Url"]),
+                );
               },
-              itemCount: data.length)
+              itemCount: Mapdata.length)
           : Center(
               child: CircularProgressIndicator(),
             ),

@@ -30,7 +30,7 @@ class _DataState extends State<Data> {
     return Scaffold(
       appBar: AppBar(
         // ignore:
-        title: Text("Data"),
+        title: Text("Online Json Data Fatch"),
       ),
       body: data != null
           ? ListView.builder(

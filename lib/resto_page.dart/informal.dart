@@ -8,19 +8,19 @@ class InformalBy extends StatefulWidget {
 }
 
 class _InformalByState extends State<InformalBy> {
-  var Url =
-      'https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi';
-  var data;
-  @override
-  void initState() {
-    super.initState();
-    getInformal();
-  }
+  //var Url =
+  //  'https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi';
+  var Mapdata;
+  var userData;
 
-  getInformal() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
+  Future getInoformal() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
   }
 
   @override
@@ -29,15 +29,15 @@ class _InformalByState extends State<InformalBy> {
       appBar: AppBar(
         title: Text("Informal By Imperfecto"),
       ),
-      body: data != null
+      body: userData != null
           ? ListView.builder(
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(data[index]["title"]),
-                  leading: Image.network(data[index]["Url"]),
+                  title: Text(userData[index]["title"]),
+                  leading: Image.network(userData[index]["Url"]),
                 );
               },
-              itemCount: data.lenght)
+              itemCount: Mapdata.lenght)
           : Center(
               child: CircularProgressIndicator(),
             ),

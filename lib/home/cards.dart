@@ -13,14 +13,14 @@ class Car extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 1750,
+      height: 2300,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Card(
             child: Container(
-              height: 80,
+              height: 120,
               width: 400,
               child: Row(
                 children: [
@@ -38,11 +38,16 @@ class Car extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         '''Miss Noor''',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
                       ),
-                      Text('''
+                      Text(
+                        '''
 
- Rajouri Garden, West Delhi'''),
+ Rajouri Garden,
+  West Delhi''',
+                        style: TextStyle(fontSize: 17),
+                      ),
                     ],
                   )
                 ],
@@ -55,7 +60,7 @@ class Car extends StatelessWidget {
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 120,
                 child: Row(
                   children: [
                     TextButton(
@@ -74,11 +79,15 @@ class Car extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           '''Tos - Take off Scarlet''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
- Punjabi Bagh, West Delhi'''),
+ Punjabi Bagh, West Delhi''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -90,7 +99,7 @@ class Car extends StatelessWidget {
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 125,
                 child: Row(
                   children: [
                     TextButton(
@@ -108,13 +117,16 @@ class Car extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Kitchen District - Hyatt Centric
+                          '''Kitchen District - 
+Hyatt Centric
 ''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
-
- Janakpuri, New Delhi'''),
+                        Text(
+                          "Janakpuri,New Delhi",
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -126,7 +138,7 @@ class Car extends StatelessWidget {
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 127,
                 child: Row(
                   children: [
                     TextButton(
@@ -144,12 +156,17 @@ class Car extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Puratan - Family Restaurent''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          '''Puratan - Family 
+Restaurent''',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Rohini, West Delhi'''),
+Rohini, West Delhi''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -161,7 +178,7 @@ Rohini, West Delhi'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 129,
                 child: Row(
                   children: [
                     TextButton(
@@ -180,11 +197,16 @@ Rohini, West Delhi'''),
                       children: <Widget>[
                         Text(
                           '''Castle's Barbeque''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Pacific Mall, Tagore Garden'''),
+Pacific Mall, Tagore 
+Garden''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -196,7 +218,7 @@ Pacific Mall, Tagore Garden'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 148,
                 child: Row(
                   children: [
                     TextButton(
@@ -215,11 +237,16 @@ Pacific Mall, Tagore Garden'''),
                       children: <Widget>[
                         Text(
                           '''Insignia By INOX''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Epicuria Mall, Nehru Place'''),
+Epicuria Mall,
+Nehru Place''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -231,7 +258,7 @@ Epicuria Mall, Nehru Place'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 150,
                 child: Row(
                   children: [
                     TextButton(
@@ -249,13 +276,19 @@ Epicuria Mall, Nehru Place'''),
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Farmers Basket At Pluck''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          '''Farmers Basket
+At Pluck''',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Pullman New Delhi Aerocity-An AccorHotels 
-Brand'''),
+Pullman New Delhi 
+Aerocity-An 
+AccorHotels Brand''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -267,7 +300,7 @@ Brand'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 178,
                 child: Row(
                   children: [
                     TextButton(
@@ -285,12 +318,19 @@ Brand'''),
                     Column(
                       children: <Widget>[
                         Text(
-                          '''The Great Kabab Factory''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          '''The Great Kabab 
+Factory''',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Radisson Blu Plaza Delhi AirPort, Mahipalpur'''),
+Radisson Blu Plaza
+ Delhi AirPort, 
+ Mahipalpur''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -302,7 +342,7 @@ Radisson Blu Plaza Delhi AirPort, Mahipalpur'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 182,
                 child: Row(
                   children: [
                     TextButton(
@@ -321,11 +361,16 @@ Radisson Blu Plaza Delhi AirPort, Mahipalpur'''),
                       children: <Widget>[
                         Text(
                           '''Hotel Jageer Palace''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
-Rajouri Garden, New Delhi'''),
+Rajouri Garden,
+New Delhi''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],
@@ -337,7 +382,7 @@ Rajouri Garden, New Delhi'''),
           Card(
             child: Container(
                 width: 400,
-                height: 80,
+                height: 185,
                 child: Row(
                   children: [
                     TextButton(
@@ -351,11 +396,16 @@ Rajouri Garden, New Delhi'''),
                       children: <Widget>[
                         Text(
                           '''Miss Noor''',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text('''
+                        Text(
+                          '''
 
- Rajouri Garden, West Delhi'''),
+Rajouri Garden, 
+West Delhi''',
+                          style: TextStyle(fontSize: 17),
+                        ),
                       ],
                     )
                   ],

@@ -8,19 +8,22 @@ class FarmerBasket extends StatefulWidget {
 }
 
 class _FarmerBasketState extends State<FarmerBasket> {
-  var Url =
-      'https://www.zomato.com/ncr/farmers-basket-at-pluck-aerocity-new-delhi';
-  var data;
-  @override
+  // var Url =
+  //   'https://www.zomato.com/ncr/farmers-basket-at-pluck-aerocity-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getFarmer() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/farmers-basket-at-pluck-aerocity-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
+  }@override
   void initState() {
+  
     super.initState();
-    getFarmers();
-  }
-
-  getFarmers() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
   }
 
   @override
@@ -29,15 +32,15 @@ class _FarmerBasketState extends State<FarmerBasket> {
       appBar: AppBar(
         title: Text("Farmer's Basket At Pluck"),
       ),
-      body: data != null
+      body: userData != null
           ? ListView.builder(
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(data[index]["title"]),
-                  leading: Image.network(data[index]["Url"]),
+                  title: Text(userData[index]["title"]),
+                  leading: Image.network(userData[index]["Url"]),
                 );
               },
-              itemCount: data.length)
+              itemCount: Mapdata.length)
           : Center(
               child: CircularProgressIndicator(),
             ),

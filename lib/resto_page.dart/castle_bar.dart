@@ -8,19 +8,23 @@ class CastlesBar extends StatefulWidget {
 }
 
 class _CastlesBarState extends State<CastlesBar> {
-  var Url =
-      'https://www.zomato.com/ncr/castles-barbeque-connaught-place-new-delhi';
-  var data;
+  // var Url =
+  //'https://www.zomato.com/ncr/castles-barbeque-connaught-place-new-delhi';
+  var Mapdata;
+  var userData;
+  Future getCastle() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/castles-barbeque-connaught-place-new-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
+  }
+
   @override
   void initState() {
     super.initState();
-    getCastle();
-  }
-
-  getCastle() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
   }
 
   @override
@@ -29,15 +33,17 @@ class _CastlesBarState extends State<CastlesBar> {
         appBar: AppBar(
           title: Text("Castle's Barbeque"),
         ),
-        body: data != null
+        body: userData != null
             ? ListView.builder(
+                itemCount: Mapdata.lenght,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(data[index]["title"]),
-                    leading: Image.network(data[index]["Url"]),
+                    title: Text(userData[index]["title"]),
+                    leading: Image.network(userData[index]["Url"]),
                   );
                 },
-                itemCount: data.lenght)
+                // itemCount: Mapdata.lenght
+              )
             : Center(
                 child: CircularProgressIndicator(),
               ));

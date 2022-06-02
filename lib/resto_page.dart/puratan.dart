@@ -8,19 +8,19 @@ class PuratanFamily extends StatefulWidget {
 }
 
 class _PuratanFamilyState extends State<PuratanFamily> {
-  var Url =
-      'https://www.zomato.com/ncr/puratan-family-restaurant-bar-rohini-delhi';
-  var data;
-  @override
-  void initState() {
-    super.initState();
-    getPuratan();
-  }
+  //var Url =
+  //  'https://www.zomato.com/ncr/puratan-family-restaurant-bar-rohini-delhi';
 
-  getPuratan() async {
-    var res = await http.get(Uri.parse(Url));
-    data = jsonDecode(res.body);
-    setState(() {});
+  var Mapdata;
+  var userData;
+  Future getPuratan() async {
+    http.Response response = await http.get(Uri.parse(
+        "https://www.zomato.com/ncr/puratan-family-restaurant-bar-rohini-delhi"));
+    Mapdata = jsonDecode(response.body);
+    setState(() {
+      userData = Mapdata['data'];
+    });
+    debugPrint(userData.toString());
   }
 
   @override
@@ -29,15 +29,15 @@ class _PuratanFamilyState extends State<PuratanFamily> {
         appBar: AppBar(
           title: Text("Puratan - Family Restaurant"),
         ),
-        body: data != null
+        body: userData != null
             ? ListView.builder(
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(data[index]["title"]),
-                    leading: Image.network(data[index]["Url"]),
+                    title: Text(userData[index]["title"]),
+                    leading: Image.network(userData[index]["Url"]),
                   );
                 },
-                itemCount: data.length)
+                itemCount: Mapdata.length)
             : Center(
                 child: CircularProgressIndicator(),
               ));
