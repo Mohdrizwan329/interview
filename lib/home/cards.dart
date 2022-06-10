@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:interview/resto_page.dart/castle_bar.dart';
-import 'package:interview/resto_page.dart/farmer_basket.dart';
-import 'package:interview/resto_page.dart/informal.dart';
-import 'package:interview/resto_page.dart/jageer_palace.dart';
-import 'package:interview/resto_page.dart/kabab_factory.dart';
-import 'package:interview/resto_page.dart/kitchen_district.dart';
-import 'package:interview/resto_page.dart/miss_nora.dart';
-import 'package:interview/resto_page.dart/puratan.dart';
-import 'package:interview/resto_page.dart/tos_scarlet.dart';
+import 'package:interview/resto_page/castle_bar.dart';
+import 'package:interview/resto_page/farmer_basket.dart';
+import 'package:interview/resto_page/informal.dart';
+import 'package:interview/resto_page/jageer_palace.dart';
+import 'package:interview/resto_page/kabab_factory.dart';
+import 'package:interview/resto_page/kitchen_district.dart';
+import 'package:interview/resto_page/miss_nora.dart';
+import 'package:interview/resto_page/puratan.dart';
+import 'package:interview/resto_page/tos_scarlet.dart';
 
 class Car extends StatelessWidget {
   @override
@@ -48,6 +48,14 @@ class Car extends StatelessWidget {
   West Delhi''',
                         style: TextStyle(fontSize: 17),
                       ),
+                      Text(
+                        '''
+             20% off''',
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold),
+                      )
                     ],
                   )
                 ],
@@ -88,6 +96,15 @@ class Car extends StatelessWidget {
  Punjabi Bagh, West Delhi''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+15% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -127,6 +144,15 @@ Hyatt Centric
                           "Janakpuri,New Delhi",
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+       20% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -167,6 +193,15 @@ Restaurent''',
 Rohini, West Delhi''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+         25% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -207,6 +242,15 @@ Pacific Mall, Tagore
 Garden''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+10% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -247,6 +291,15 @@ Epicuria Mall,
 Nehru Place''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+    30% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -289,6 +342,14 @@ Aerocity-An
 AccorHotels Brand''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+      45% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -331,6 +392,15 @@ Radisson Blu Plaza
  Mahipalpur''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+    15% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -360,7 +430,9 @@ Radisson Blu Plaza
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Hotel Jageer Palace''',
+                          '''
+
+Hotel Jageer Palace''',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                         ),
@@ -368,9 +440,19 @@ Radisson Blu Plaza
                           '''
 
 Rajouri Garden,
+
 New Delhi''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+20% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        )
                       ],
                     )
                   ],
@@ -395,7 +477,9 @@ New Delhi''',
                     Column(
                       children: <Widget>[
                         Text(
-                          '''Miss Noor''',
+                          '''
+
+Miss Noor''',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                         ),
@@ -406,6 +490,16 @@ Rajouri Garden,
 West Delhi''',
                           style: TextStyle(fontSize: 17),
                         ),
+                        Text(
+                          '''
+
+
+         10% off''',
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17),
+                        )
                       ],
                     )
                   ],

@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class MissNora extends StatefulWidget {
+class TosScarlet extends StatefulWidget {
   @override
-  State<MissNora> createState() => _MissNoraState();
+  State<TosScarlet> createState() => _TosScarletState();
 }
 
-class _MissNoraState extends State<MissNora> {
-  //var Url = 'https://www.zomato.com/ncr/miss-nora-rajouri-garden-new-delhi';
+class _TosScarletState extends State<TosScarlet> {
+  //var Url =
+  // 'https://www.zomato.com/ncr/tos-take-off-scarlet-punjabi-bagh-new-delhi';
   var Mapdata;
   var userData;
-  Future getMiss() async {
+  Future getTos() async {
     http.Response response = await http.get(Uri.parse(
-        "https://www.zomato.com/ncr/miss-nora-rajouri-garden-new-delhi"));
+        "https://www.zomato.com/ncr/tos-take-off-scarlet-punjabi-bagh-new-delhi"));
     Mapdata = jsonDecode(response.body);
     setState(() {
       userData = Mapdata['data'];
@@ -21,17 +22,19 @@ class _MissNoraState extends State<MissNora> {
     debugPrint(userData.toString());
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Miss Nora"),
+        title: Text("TOS - Take Off Scarlet"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: userData != null
           ? ListView.builder(
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(userData[index]["title"]),
-                  // subtitle: Text("ID:${data[index]["id"]}"),
+                  //subtitle: Text("ID:${data[index]["id"]}"),
                   leading: Image.network(userData[index]["Url"]),
                 );
               },

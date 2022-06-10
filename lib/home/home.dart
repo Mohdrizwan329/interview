@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview/back/order.dart';
 import 'package:interview/home/cards.dart';
 import 'package:interview/scroll/circle.dart';
 import 'package:interview/back/data.dart';
@@ -19,6 +20,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.grey.shade400,
 
         //  title: Text(
         //  "Welcome Home",
@@ -231,7 +233,7 @@ class _HomeState extends State<Home> {
       ),
       //------- Bottom navigation bar --------//
       bottomNavigationBar: Container(
-        color: Colors.blue,
+        color: Colors.grey.shade400,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -260,7 +262,7 @@ class _HomeState extends State<Home> {
             IconButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                    context, MaterialPageRoute(builder: (context) => Order()));
               },
               icon: Icon(
                 Icons.shopping_bag,

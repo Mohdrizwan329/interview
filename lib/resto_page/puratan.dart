@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class KitchenDistrict extends StatefulWidget {
+class PuratanFamily extends StatefulWidget {
   @override
-  State<KitchenDistrict> createState() => _KitchenDistrictState();
+  State<PuratanFamily> createState() => _PuratanFamilyState();
 }
 
-class _KitchenDistrictState extends State<KitchenDistrict> {
+class _PuratanFamilyState extends State<PuratanFamily> {
   //var Url =
-  // 'https://www.zomato.com/ncr/kitchen-district-hyatt-centric-1-janakpuri-new-delhi';
+  //  'https://www.zomato.com/ncr/puratan-family-restaurant-bar-rohini-delhi';
+
   var Mapdata;
   var userData;
-  Future getKitchen() async {
+  Future getPuratan() async {
     http.Response response = await http.get(Uri.parse(
-        "https://www.zomato.com/ncr/kitchen-district-hyatt-centric-1-janakpuri-new-delhi"));
+        "https://www.zomato.com/ncr/puratan-family-restaurant-bar-rohini-delhi"));
     Mapdata = jsonDecode(response.body);
     setState(() {
       userData = Mapdata['data'];
@@ -26,7 +27,8 @@ class _KitchenDistrictState extends State<KitchenDistrict> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Kitchen District - Hyatt Centric"),
+          title: Text("Puratan - Family Restaurant"),
+          backgroundColor: Colors.grey.shade400,
         ),
         body: userData != null
             ? ListView.builder(

@@ -31,6 +31,7 @@ class _DataState extends State<Data> {
       appBar: AppBar(
         // ignore:
         title: Text("Online Json Data Fatch"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: data != null
           ? ListView.builder(
@@ -46,7 +47,7 @@ class _DataState extends State<Data> {
               child: CircularProgressIndicator(),
             ),
       bottomNavigationBar: Container(
-        color: Colors.blue,
+        color: Colors.grey.shade400,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[

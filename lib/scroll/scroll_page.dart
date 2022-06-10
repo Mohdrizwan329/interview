@@ -27,6 +27,8 @@ class Scaroll extends StatelessWidget {
               child: Image.asset(
                 "assets/content9442.jpg",
                 fit: BoxFit.fill,
+                height: 40,
+                width: 300,
               ),
             ),
           ),
@@ -48,6 +50,8 @@ class Scaroll extends StatelessWidget {
               child: Image.asset(
                 "assets/sun-planet.jpg",
                 fit: BoxFit.fill,
+                height: 40,
+                width: 300,
               ),
             ),
           ),
@@ -69,6 +73,8 @@ class Scaroll extends StatelessWidget {
               child: Image.asset(
                 "assets/fast-food.jpg",
                 fit: BoxFit.fill,
+                height: 40,
+                width: 300,
               ),
             ),
           ),
@@ -90,6 +96,8 @@ class Scaroll extends StatelessWidget {
               child: Image.asset(
                 "assets/unnamed.jpg",
                 fit: BoxFit.fill,
+                height: 40,
+                width: 300,
               ),
             ),
           ),
@@ -111,6 +119,8 @@ class Scaroll extends StatelessWidget {
               child: Image.asset(
                 "assets/0.68487000_1559290735_70-20190615-dte-english.jpg",
                 fit: BoxFit.fill,
+                height: 40,
+                width: 300,
               ),
             ),
           ),

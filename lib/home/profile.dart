@@ -11,14 +11,14 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Setting"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: Container(
         child: ListView(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Colors.orange),
+                decoration: BoxDecoration(color: Colors.grey),
                 accountName: Text("Mohd Jiyan",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
@@ -30,10 +30,8 @@ class _ProfileState extends State<Profile> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: ListTile(
-                tileColor: Colors.greenAccent,
                 leading: Icon(
                   Icons.account_box,
                   size: 40,
@@ -46,10 +44,8 @@ class _ProfileState extends State<Profile> {
                 trailing: Icon(Icons.add),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: ListTile(
-                tileColor: Colors.grey,
                 leading: Icon(
                   Icons.account_balance,
                   size: 40,
@@ -61,10 +57,8 @@ class _ProfileState extends State<Profile> {
                 trailing: Icon(Icons.account_balance),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: ListTile(
-                tileColor: Colors.amberAccent,
                 leading: Icon(
                   Icons.privacy_tip,
                   size: 40,
@@ -76,10 +70,8 @@ class _ProfileState extends State<Profile> {
                 trailing: Icon(Icons.privacy_tip),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: ListTile(
-                tileColor: Colors.brown,
                 leading: Icon(
                   Icons.policy,
                   size: 40,
@@ -91,10 +83,8 @@ class _ProfileState extends State<Profile> {
                 trailing: Icon(Icons.account_box),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
+            Card(
               child: ListTile(
-                  tileColor: Colors.cyan,
                   leading: Icon(
                     Icons.help_center,
                     size: 40,
@@ -106,6 +96,18 @@ class _ProfileState extends State<Profile> {
                   trailing: Icon(
                     Icons.read_more,
                   )),
+            ),
+            Card(
+              child: ListTile(
+                  leading: Icon(
+                    Icons.logout,
+                    size: 40,
+                  ),
+                  title: Text("Log Out",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  subtitle: Text("Public"),
+                  trailing: Icon(Icons.logout)),
             ),
           ],
         ),

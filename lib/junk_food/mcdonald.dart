@@ -2,35 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class FarmerBasket extends StatefulWidget {
+class MacDonald extends StatefulWidget {
   @override
-  State<FarmerBasket> createState() => _FarmerBasketState();
+  State<MacDonald> createState() => _MacDonaldState();
 }
 
-class _FarmerBasketState extends State<FarmerBasket> {
-  // var Url =
-  //   'https://www.zomato.com/ncr/farmers-basket-at-pluck-aerocity-new-delhi';
+class _MacDonaldState extends State<MacDonald> {
   var Mapdata;
   var userData;
-  Future getFarmer() async {
+
+  Future getInoformal() async {
     http.Response response = await http.get(Uri.parse(
-        "https://www.zomato.com/ncr/farmers-basket-at-pluck-aerocity-new-delhi"));
+        "https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi"));
     Mapdata = jsonDecode(response.body);
     setState(() {
       userData = Mapdata['data'];
     });
     debugPrint(userData.toString());
-  }@override
-  void initState() {
-  
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Farmer's Basket At Pluck"),
+        title: Text("Mac Donald"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: userData != null
           ? ListView.builder(
@@ -40,7 +36,7 @@ class _FarmerBasketState extends State<FarmerBasket> {
                   leading: Image.network(userData[index]["Url"]),
                 );
               },
-              itemCount: Mapdata.length)
+              itemCount: Mapdata.lenght)
           : Center(
               child: CircularProgressIndicator(),
             ),

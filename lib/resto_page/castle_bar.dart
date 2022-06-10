@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class KababFactory extends StatefulWidget {
+class CastlesBar extends StatefulWidget {
   @override
-  State<KababFactory> createState() => _KababFactoryState();
+  State<CastlesBar> createState() => _CastlesBarState();
 }
 
-class _KababFactoryState extends State<KababFactory> {
-  //var Url =
-  //  'https://www.zomato.com/ncr/the-great-kabab-factory-radisson-blu-marina-connaught-place-new-delhi';
+class _CastlesBarState extends State<CastlesBar> {
+  // var Url =
+  //'https://www.zomato.com/ncr/castles-barbeque-connaught-place-new-delhi';
   var Mapdata;
   var userData;
-  Future getKabab() async {
+  Future getCastle() async {
     http.Response response = await http.get(Uri.parse(
-        "https://www.zomato.com/ncr/the-great-kabab-factory-radisson-blu-marina-connaught-place-new-delhi"));
+        "https://www.zomato.com/ncr/castles-barbeque-connaught-place-new-delhi"));
     Mapdata = jsonDecode(response.body);
     setState(() {
       userData = Mapdata['data'];
@@ -23,20 +23,28 @@ class _KababFactoryState extends State<KababFactory> {
   }
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(" Kabab Factory"),
+          title: Text("Castle's Barbeque"),
+          backgroundColor: Colors.grey.shade400,
         ),
         body: userData != null
             ? ListView.builder(
+                itemCount: Mapdata.lenght,
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(userData[index]["title"]),
                     leading: Image.network(userData[index]["Url"]),
                   );
                 },
-                itemCount: Mapdata.length)
+                // itemCount: Mapdata.lenght
+              )
             : Center(
                 child: CircularProgressIndicator(),
               ));

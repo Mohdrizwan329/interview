@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class InformalBy extends StatefulWidget {
+class Pizza extends StatefulWidget {
   @override
-  State<InformalBy> createState() => _InformalByState();
+  State<Pizza> createState() => _PizzaState();
 }
 
-class _InformalByState extends State<InformalBy> {
-  //var Url =
-  //  'https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi';
+class _PizzaState extends State<Pizza> {
   var Mapdata;
   var userData;
 
@@ -27,7 +25,8 @@ class _InformalByState extends State<InformalBy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Informal By Imperfecto"),
+        title: Text("Pizza"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: userData != null
           ? ListView.builder(

@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class JageerPalace extends StatefulWidget {
+class PizzaHut extends StatefulWidget {
   @override
-  State<JageerPalace> createState() => _JageerPalaceState();
+  State<PizzaHut> createState() => _PizzaHutState();
 }
 
-class _JageerPalaceState extends State<JageerPalace> {
-  // var Url =
-  //   'https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi';
+class _PizzaHutState extends State<PizzaHut> {
   var Mapdata;
   var userData;
-  Future getJageer() async {
+
+  Future getInoformal() async {
     http.Response response = await http.get(Uri.parse(
-        "https://www.zomato.com/ncr/hotel-jageer-palace-rajouri-garden-new-delhi"));
+        "https://www.zomato.com/ncr/informal-by-imperfecto-janpath-new-delhi"));
     Mapdata = jsonDecode(response.body);
     setState(() {
       userData = Mapdata['data'];
@@ -23,15 +22,11 @@ class _JageerPalaceState extends State<JageerPalace> {
   }
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hotel Jageer Palace"),
+        title: Text("Pizza Hut"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: userData != null
           ? ListView.builder(
@@ -41,7 +36,7 @@ class _JageerPalaceState extends State<JageerPalace> {
                   leading: Image.network(userData[index]["Url"]),
                 );
               },
-              itemCount: Mapdata.length)
+              itemCount: Mapdata.lenght)
           : Center(
               child: CircularProgressIndicator(),
             ),

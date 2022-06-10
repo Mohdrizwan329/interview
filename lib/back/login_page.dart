@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Login Page"),
+        backgroundColor: Colors.grey.shade400,
       ),
       body: Stack(
         fit: StackFit.expand,
