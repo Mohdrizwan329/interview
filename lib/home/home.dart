@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:interview/back/order.dart';
 import 'package:interview/home/cards.dart';
@@ -201,7 +202,7 @@ class _HomeState extends State<Home> {
                 child: Row(
                   children: [
                     Text(
-                      "Hi Foodie, what's your pick?",
+                      'Hi Foodie, what' 's' ' your pick?',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
